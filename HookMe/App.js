@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Splash from './pages/splash';
-import Home from './pages/home';
+import Login from './pages/login';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,9 +16,9 @@ const App = () => {
           component={Splash}
         />
         <Stack.Screen
-          name="Home"
+          name="Login"
           options={{headerShown: false}}
-          component={Home}
+          component={Login}
         />
       </Stack.Navigator>
     </NavigationContainer>
