@@ -8,7 +8,7 @@ export default Splash = () => {
   const navigation = useNavigation();
   useEffect(() => {
     setTimeout(() => {
-      navigation.dispatch(StackActions.replace('Login'));
+      // navigation.dispatch(StackActions.replace('Login'));
     }, 3000);
   }, []);
   return (
