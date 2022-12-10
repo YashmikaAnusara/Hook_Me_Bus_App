@@ -191,29 +191,42 @@ const Darkmap = [
 ];
 export default function Login() {
   return (
-    <SafeAreaView>
-      <RadialGradient
-        style={{width: '100%', height: '100%'}}
-        colors={['black', 'green', 'blue', 'red']}
-        stops={[0.1, 0.4, 0.3, 0.75]}
-        center={[100, 100]}
-        radius={200}>
-        <ScrollView>
-          <View style={{}}>
-            <MapView
-              style={{width: 500, height: 500}}
-              provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-              customMapStyle={Darkmap}
-              initialRegion={{
-                latitude: 6.914656,
-                longitude: 79.972773,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
-              }}
-            />
-          </View>
-        </ScrollView>
-      </RadialGradient>
+    <SafeAreaView style={{width: '100%', height: '100%'}}>
+      {/* <ScrollView> */}
+      <View style={{height: '100%', width: '100%', position: 'relative'}}>
+        <Image
+          source={require('../assets/back2.png')}
+          style={{width: '100%', height: '100%', position: 'absolute'}}
+        />
+        <View style={{paddingTop: 30, paddingLeft: 20}}>
+          <Text style={{color: '#ffffff', fontSize: 28}}>Welcome Thivaka</Text>
+          <Text style={{color: '#ffffff', marginTop: 5, fontSize: 15}}>
+            Trusted Travel Platform
+          </Text>
+        </View>
+        {/* <MapView
+          style={{width: 500, height: 500}}
+          provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+          customMapStyle={Darkmap}
+          initialRegion={{
+            latitude: 6.914656,
+            longitude: 79.972773,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        /> */}
+        <Image
+          source={require('../assets/bus1.jpg')}
+          style={{
+            width: '60%',
+            height: '20%',
+            position: 'absolute',
+            marginTop: 500,
+            marginLeft: 140,
+          }}
+        />
+      </View>
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }
