@@ -221,7 +221,7 @@ export default function Login() {
             paddingLeft: 20,
             position: 'absolute',
           }}>
-          <Text style={{color: '#ffffff', fontSize: 28}}>Welcome Thivaka</Text>
+          <Text style={{color: '#ffffff', fontSize: 28}}>Welcome Yashmika</Text>
           <Text style={{color: '#ffffff', marginTop: 5, fontSize: 15}}>
             Trusted Travel Platform
           </Text>
