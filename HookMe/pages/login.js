@@ -245,13 +245,13 @@ export default function Login() {
             width: '60%',
             height: '20%',
             position: 'absolute',
-            marginTop: 500,
+            marginTop: 480,
             marginLeft: 140,
           }}
         />
         <View
           style={{
-            paddingTop: 540,
+            paddingTop: 510,
             paddingLeft: 10,
             paddingRight: 190,
             position: 'absolute',
