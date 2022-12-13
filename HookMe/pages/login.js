@@ -301,6 +301,17 @@ export default function Login() {
               Home
             </Text>
           </View>
+          <View
+            style={{position: 'absolute', paddingLeft: 140, marginTop: -30}}>
+            <Image
+              source={require('../assets/Sback.png')}
+              style={{height: 100, width: 100}}
+            />
+            <Image
+              source={require('../assets/Search.png')}
+              style={{marginTop: -75, marginLeft: 33, height: 35, width: 35}}
+            />
+          </View>
         </View>
       </View>
     </SafeAreaView>
