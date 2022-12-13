@@ -294,10 +294,15 @@ export default function Login() {
           <View>
             <Image
               source={require('../assets/Home.png')}
-              style={{marginLeft: 40, marginTop: 20, height: 30, width: 30}}
+              style={{marginLeft: 40, marginTop: 18, height: 30, width: 30}}
             />
             <Text
-              style={{color: '#ffffff', fontWeight: 'bold', marginLeft: 35}}>
+              style={{
+                color: '#ffffff',
+                fontWeight: 'bold',
+                marginLeft: 35,
+                marginTop: 2,
+              }}>
               Home
             </Text>
           </View>
@@ -311,6 +316,21 @@ export default function Login() {
               source={require('../assets/Search.png')}
               style={{marginTop: -75, marginLeft: 33, height: 35, width: 35}}
             />
+          </View>
+          <View style={{position: 'absolute'}}>
+            <Image
+              source={require('../assets/Trip.png')}
+              style={{marginLeft: 310, marginTop: 18, height: 30, width: 30}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontWeight: 'bold',
+                marginLeft: 308,
+                marginTop: 2,
+              }}>
+              Trips
+            </Text>
           </View>
         </View>
       </View>
