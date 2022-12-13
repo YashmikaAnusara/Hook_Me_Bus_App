@@ -237,6 +237,21 @@ export default function Login() {
               }}
             />
           </View>
+          <Pressable
+            style={{
+              backgroundColor: '#ffffff',
+              width: 80,
+              padding: 5,
+              marginTop: 20,
+              borderBottomLeftRadius: 10,
+              borderBottomRightRadius: 10,
+              borderTopLeftRadius: 10,
+              borderTopRightRadius: 10,
+            }}>
+            <Text style={{textAlign: 'center', fontWeight: 'bold'}}>
+              Start Trip
+            </Text>
+          </Pressable>
         </View>
 
         <Image
