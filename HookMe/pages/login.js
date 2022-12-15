@@ -1,7 +1,6 @@
 import {View, Text, SafeAreaView, Image, Pressable} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
-import Location from 'expo-location';
 const Darkmap = [
   {
     elementType: 'geometry',
@@ -189,19 +188,6 @@ const Darkmap = [
   },
 ];
 export default function Login() {
-  useEffect(() => {
-    (async () => {
-      let {status} = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        console.log('Permission to access location was denied');
-        return;
-      }
-
-      let location = await Location.getCurrentPositionAsync({});
-      console.log();
-      location;
-    })();
-  }, []);
   return (
     <SafeAreaView style={{width: '100%', height: '100%', flex: 1}}>
       <View
@@ -226,6 +212,11 @@ export default function Login() {
               coordinate={{latitude: 6.914656, longitude: 79.972773}}
               image={require('../assets/trackbus.png')}
               style={{transform: [{rotate: '210deg'}]}}
+            />
+            <Marker
+              coordinate={{latitude: 6.902718, longitude: 79.97995}}
+              image={require('../assets/trackbus.png')}
+              style={{transform: [{rotate: '10deg'}]}}
             />
           </MapView>
         </View>
