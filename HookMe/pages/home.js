@@ -1,4 +1,4 @@
-import {View, Text, SafeAreaView, Image, Pressable} from 'react-native';
+import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 const Darkmap = [
@@ -240,18 +240,20 @@ export default function Home() {
             Trusted Travel Platform
           </Text>
           <View>
-            <Image
-              source={require('../assets/profile.png')}
-              style={{
-                position: 'absolute',
-                marginLeft: 300,
-                marginTop: -62,
-                width: 50,
-                height: 50,
-              }}
-            />
+            <TouchableOpacity>
+              <Image
+                source={require('../assets/profile.png')}
+                style={{
+                  position: 'absolute',
+                  marginLeft: 300,
+                  marginTop: -62,
+                  width: 50,
+                  height: 50,
+                }}
+              />
+            </TouchableOpacity>
           </View>
-          <Pressable
+          <TouchableOpacity
             style={{
               backgroundColor: '#ffffff',
               width: 80,
@@ -265,7 +267,7 @@ export default function Home() {
             <Text style={{textAlign: 'center', fontWeight: 'bold'}}>
               Start Trip
             </Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
 
         <Image
@@ -295,7 +297,7 @@ export default function Home() {
             We are provide the Private Buses & Sri Lanka Transport Board Buses
           </Text>
           <View style={{paddingTop: 10, paddingRight: 40, paddingLeft: 40}}>
-            <Pressable
+            <TouchableOpacity
               style={{
                 backgroundColor: '#ffffff',
                 height: 30,
@@ -308,7 +310,7 @@ export default function Home() {
                 style={{textAlign: 'center', marginTop: 4, fontWeight: 'bold'}}>
                 About Us
               </Text>
-            </Pressable>
+            </TouchableOpacity>
           </View>
         </View>
         <View
@@ -329,7 +331,7 @@ export default function Home() {
               style={{
                 color: '#ffffff',
                 fontWeight: 'bold',
-                marginLeft: 35,
+                marginLeft: 37,
                 marginTop: 2,
               }}>
               Home
@@ -355,7 +357,7 @@ export default function Home() {
               style={{
                 color: '#ffffff',
                 fontWeight: 'bold',
-                marginLeft: 308,
+                marginLeft: 309,
                 marginTop: 2,
               }}>
               Trips

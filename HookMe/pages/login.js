@@ -8,8 +8,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
+import {useNavigation} from '@react-navigation/core';
 
 export default function Login() {
+  const navigation = useNavigation();
+
+  const SinginHandler = () => {
+    navigation.navigate('Home');
+  };
   return (
     <SafeAreaView style={{flex: 1, height: '100%', width: '100%'}}>
       <ScrollView>
@@ -75,7 +81,8 @@ export default function Login() {
                 borderBottomLeftRadius: 20,
                 borderTopRightRadius: 20,
                 borderBottomRightRadius: 20,
-              }}>
+              }}
+              onPress={SinginHandler}>
               <Text
                 style={{
                   textAlign: 'center',
@@ -83,9 +90,20 @@ export default function Login() {
                   fontWeight: 'bold',
                   fontSize: 20,
                 }}>
-                Sing in
+                Sign in
               </Text>
             </TouchableOpacity>
+            <View style={{paddingTop: 20, paddingLeft: 18}}>
+              <Text style={{color: '#ffffff', marginLeft: 50}}>
+                Don't have an account?
+              </Text>
+              <TouchableOpacity>
+                <Text
+                  style={{color: '#ffffff', marginLeft: 200, marginTop: -19}}>
+                  Sign up
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </ScrollView>
