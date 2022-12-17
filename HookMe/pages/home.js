@@ -196,6 +196,7 @@ export default function Home() {
           width: '100%',
           position: 'relative',
           flex: 1,
+          backgroundColor: '#262626',
         }}>
         <View style={{paddingTop: 110}}>
           <MapView

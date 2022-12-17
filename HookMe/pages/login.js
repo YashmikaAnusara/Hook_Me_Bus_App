@@ -22,7 +22,7 @@ export default function Login() {
   };
 
   return (
-    <SafeAreaView style={{flex: 1, height: '100%', width: '100%'}}>
+    <SafeAreaView style={{height: '100%', width: '100%'}}>
       <ScrollView>
         <View
           style={{
@@ -98,13 +98,11 @@ export default function Login() {
                 Sign in
               </Text>
             </TouchableOpacity>
-            <View style={{paddingTop: 20, paddingLeft: 18}}>
-              <Text style={{color: '#ffffff', marginLeft: 50}}>
-                Don't have an account?
-              </Text>
+            <View style={{alignSelf: 'center', paddingTop: 15}}>
+              <Text style={{color: '#ffffff'}}>Don't have an account?</Text>
               <TouchableOpacity onPress={SingupHandler}>
                 <Text
-                  style={{color: '#ffffff', marginLeft: 200, marginTop: -19}}>
+                  style={{color: '#ffffff', marginLeft: 150, marginTop: -19}}>
                   Sign up
                 </Text>
               </TouchableOpacity>
