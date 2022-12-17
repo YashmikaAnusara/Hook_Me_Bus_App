@@ -16,6 +16,9 @@ export default function Signup() {
   const Back = () => {
     navigation.navigate('Login');
   };
+  const SignUp = () => {
+    navigation.navigate('Login');
+  };
   return (
     <SafeAreaView style={{flex: 1, height: '100%', width: '100%'}}>
       <ScrollView>
@@ -162,7 +165,8 @@ export default function Signup() {
                 borderBottomLeftRadius: 20,
                 borderTopRightRadius: 20,
                 borderBottomRightRadius: 20,
-              }}>
+              }}
+              onPress={SignUp}>
               <Text
                 style={{
                   textAlign: 'center',
