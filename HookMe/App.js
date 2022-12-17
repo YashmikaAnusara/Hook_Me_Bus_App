@@ -5,7 +5,7 @@ import Splash from './pages/splash';
 import Login from './pages/login';
 import Home from './pages/home';
 import Signup from './pages/signup';
-import Strarttrip from './pages/strarttrip';
+import Starttrip from './pages/starttrip';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,7 +36,7 @@ const App = () => {
         <Stack.Screen
           name="Start_Trip"
           options={{headerShown: false}}
-          component={Strarttrip}
+          component={Starttrip}
         />
       </Stack.Navigator>
     </NavigationContainer>
