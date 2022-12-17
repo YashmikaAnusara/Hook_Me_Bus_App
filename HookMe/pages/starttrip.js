@@ -298,11 +298,27 @@ export default function Starttrip() {
               position: 'absolute',
               width: '100%',
               paddingTop: 290,
-              paddingLeft: 50,
-              paddingRight: 50,
+              paddingLeft: 100,
+              paddingRight: 100,
             }}>
-            <TouchableOpacity style={{backgroundColor: '#D9D9D9'}}>
-              <Text style={{textAlign: 'center'}}>Search</Text>
+            <TouchableOpacity
+              style={{
+                backgroundColor: '#D9D9D9',
+                borderBottomLeftRadius: 20,
+                borderBottomRightRadius: 20,
+                borderTopLeftRadius: 20,
+                borderTopRightRadius: 20,
+                height: 35,
+              }}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  paddingTop: 5,
+                  fontWeight: 'bold',
+                  fontSize: 18,
+                }}>
+                Search
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
