@@ -1,6 +1,7 @@
 import {View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
+import {useNavigation} from '@react-navigation/core';
 const Darkmap = [
   {
     elementType: 'geometry',
@@ -188,6 +189,11 @@ const Darkmap = [
   },
 ];
 export default function Home() {
+  const navigation = useNavigation();
+
+  const Start_Trip = () => {
+    navigation.navigate('Start_Trip');
+  };
   return (
     <SafeAreaView style={{width: '100%', height: '100%', flex: 1}}>
       <View
@@ -264,7 +270,8 @@ export default function Home() {
               borderBottomRightRadius: 10,
               borderTopLeftRadius: 10,
               borderTopRightRadius: 10,
-            }}>
+            }}
+            onPress={Start_Trip}>
             <Text style={{textAlign: 'center', fontWeight: 'bold'}}>
               Start Trip
             </Text>
