@@ -13,9 +13,14 @@ import {useNavigation} from '@react-navigation/core';
 export default function Login() {
   const navigation = useNavigation();
 
-  const SinginHandler = () => {
+  const SigninHandler = () => {
     navigation.navigate('Home');
   };
+
+  const SingupHandler = () => {
+    navigation.navigate('SingUp');
+  };
+
   return (
     <SafeAreaView style={{flex: 1, height: '100%', width: '100%'}}>
       <ScrollView>
@@ -82,7 +87,7 @@ export default function Login() {
                 borderTopRightRadius: 20,
                 borderBottomRightRadius: 20,
               }}
-              onPress={SinginHandler}>
+              onPress={SigninHandler}>
               <Text
                 style={{
                   textAlign: 'center',
