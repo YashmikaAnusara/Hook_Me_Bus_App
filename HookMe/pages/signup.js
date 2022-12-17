@@ -107,6 +107,7 @@ export default function Signup() {
                 borderBottomRightRadius: 10,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
+                InputType: 'numeric',
               }}
             />
           </View>
