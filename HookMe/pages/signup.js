@@ -5,6 +5,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/core';
@@ -38,6 +39,139 @@ export default function Signup() {
             <Text style={{color: '#ffffff', fontSize: 15}}>
               User Registration
             </Text>
+          </View>
+          <View style={{paddingTop: 50}}>
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Enter your first name
+            </Text>
+            <TextInput
+              placeholder="Enter your first name"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Enter your NIC number
+            </Text>
+            <TextInput
+              placeholder="Enter your NIC number"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Enter your email
+            </Text>
+            <TextInput
+              placeholder="Enter your email"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Enter your mobile number
+            </Text>
+            <TextInput
+              placeholder="Enter your mobile number"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+          </View>
+          <View style={{paddingTop: 20}}>
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Enter your password
+            </Text>
+            <TextInput
+              placeholder="Enter your password"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+            <Text style={{color: '#ffffff', paddingLeft: 15, fontSize: 15}}>
+              Re-enter your password
+            </Text>
+            <TextInput
+              placeholder="Re-enter your password"
+              style={{
+                height: 40,
+                margin: 12,
+                borderWidth: 1,
+                padding: 10,
+                backgroundColor: '#ffffff',
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              paddingLeft: 30,
+              paddingRight: 30,
+              marginTop: 15,
+              marginBottom: '7%',
+            }}>
+            <TouchableOpacity
+              style={{
+                backgroundColor: '#A0A0A0',
+                height: 40,
+                borderTopLeftRadius: 20,
+                borderBottomLeftRadius: 20,
+                borderTopRightRadius: 20,
+                borderBottomRightRadius: 20,
+              }}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  paddingTop: 6,
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                Sign up
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
