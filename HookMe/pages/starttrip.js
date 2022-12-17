@@ -293,9 +293,16 @@ export default function Starttrip() {
               }}
             />
           </View>
-          <View style={{position: 'absolute'}}>
-            <TouchableOpacity>
-              <Text style={{color: '#ffffff'}}>Search</Text>
+          <View
+            style={{
+              position: 'absolute',
+              width: '100%',
+              paddingTop: 290,
+              paddingLeft: 50,
+              paddingRight: 50,
+            }}>
+            <TouchableOpacity style={{backgroundColor: '#D9D9D9'}}>
+              <Text style={{textAlign: 'center'}}>Search</Text>
             </TouchableOpacity>
           </View>
         </View>
