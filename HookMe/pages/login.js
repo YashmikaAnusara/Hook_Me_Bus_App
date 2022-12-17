@@ -102,7 +102,7 @@ export default function Login() {
               <Text style={{color: '#ffffff', marginLeft: 50}}>
                 Don't have an account?
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={SingupHandler}>
                 <Text
                   style={{color: '#ffffff', marginLeft: 200, marginTop: -19}}>
                   Sign up
