@@ -122,6 +122,25 @@ export default function Bustype() {
                 <Text style={{fontWeight: 'bold'}}>Route:</Text>
                 <Text style={{fontWeight: 'bold'}}>Kandana to Kelaniya</Text>
                 <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                <TouchableOpacity
+                  style={{
+                    marginTop: 10,
+                    backgroundColor: '#262626',
+                    borderTopLeftRadius: 20,
+                    borderBottomLeftRadius: 20,
+                    borderBottomRightRadius: 20,
+                    borderTopRightRadius: 20,
+                    height: 30,
+                  }}>
+                  <Text
+                    style={{
+                      color: '#ffffff',
+                      alignSelf: 'center',
+                      marginTop: 5,
+                    }}>
+                    Join
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
