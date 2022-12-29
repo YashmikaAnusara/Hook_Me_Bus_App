@@ -41,12 +41,14 @@ export default function Bustype() {
           <View style={{paddingLeft: 25, paddingTop: 20}}>
             <Text style={{color: '#ffffff', fontSize: 22}}>Bus Type</Text>
           </View>
-          <View style={{width: '100%'}}>
-            <ScrollView horizontal={true}>
+          <View style={{width: '100%', marginTop: 20}}>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}>
               <TouchableOpacity
                 style={{
                   marginLeft: 90,
-                  marginBottom: 100,
+                  marginBottom: 20,
                   width: 530,
                   // backgroundColor: '#ffffff',
                 }}>
@@ -68,7 +70,7 @@ export default function Bustype() {
               <TouchableOpacity
                 style={{
                   marginLeft: 350,
-                  marginBottom: 100,
+
                   marginRight: 100,
                   position: 'absolute',
                   // backgroundColor: '#ffffff',
@@ -89,6 +91,9 @@ export default function Bustype() {
                 </Text>
               </TouchableOpacity>
             </ScrollView>
+          </View>
+          <View style={{paddingLeft: 25, paddingTop: 20}}>
+            <Text style={{color: '#ffffff', fontSize: 22}}>Buses</Text>
           </View>
         </View>
       </ScrollView>
