@@ -203,6 +203,9 @@ export default function Starttrip() {
   const Back = () => {
     navigation.navigate('Home');
   };
+  const Bustype = () => {
+    navigation.navigate('Bus_Type');
+  };
   return (
     <SafeAreaView style={{flex: 1, height: '100%', width: '100%'}}>
       <ScrollView>
@@ -302,6 +305,7 @@ export default function Starttrip() {
               paddingRight: 100,
             }}>
             <TouchableOpacity
+              onPress={Bustype}
               style={{
                 backgroundColor: '#D9D9D9',
                 borderBottomLeftRadius: 20,
