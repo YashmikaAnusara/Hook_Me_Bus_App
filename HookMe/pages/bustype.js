@@ -92,8 +92,38 @@ export default function Bustype() {
               </TouchableOpacity>
             </ScrollView>
           </View>
-          <View style={{paddingLeft: 25, paddingTop: 20}}>
+          <View
+            style={{
+              paddingLeft: 25,
+              paddingTop: 20,
+              paddingRight: 25,
+              marginBottom: 100,
+            }}>
             <Text style={{color: '#ffffff', fontSize: 22}}>Buses</Text>
+            <View
+              style={{
+                marginTop: 20,
+                width: '100%',
+                height: 150,
+                backgroundColor: '#D9D9D9',
+                borderTopRightRadius: 20,
+                borderTopLeftRadius: 20,
+                borderBottomLeftRadius: 20,
+                borderBottomRightRadius: 20,
+              }}>
+              <View style={{marginLeft: 140}}>
+                <Image
+                  source={require('../assets/bus3.png')}
+                  style={{width: 200, height: 150}}
+                />
+              </View>
+              <View
+                style={{position: 'absolute', paddingLeft: 15, paddingTop: 20}}>
+                <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                <Text style={{fontWeight: 'bold'}}>Kandana to Kelaniya</Text>
+                <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+              </View>
+            </View>
           </View>
         </View>
       </ScrollView>
