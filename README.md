@@ -8,4 +8,6 @@ This is a personal project which is conducted for education purposes. This proje
 ![My Skills](https://skillicons.dev/icons?i=react)
 
 ### Interfaces
-<p > <img src="Interfaces/frame1.png" alt="" /> </p>
+<p > <img src="Interfaces/frame1.jpg" alt="" /> </p>
+<p > <img src="Interfaces/frame2.png" alt="" /> </p>
+<p > <img src="Interfaces/frame3.png" alt="" /> </p>
