@@ -7,14 +7,23 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {useNavigation} from '@react-navigation/core';
 
 export default function Bustype() {
   const navigation = useNavigation();
+  const [bustype, setbustype] = useState('normal');
 
   const Back = () => {
     navigation.navigate('Start_Trip');
+  };
+
+  const normalbus = () => {
+    setbustype('normal');
+  };
+
+  const intercitybus = () => {
+    setbustype('intercity');
   };
 
   return (
@@ -46,6 +55,7 @@ export default function Bustype() {
               horizontal={true}
               showsHorizontalScrollIndicator={false}>
               <TouchableOpacity
+                onPress={normalbus}
                 style={{
                   marginLeft: 90,
                   marginBottom: 20,
@@ -68,9 +78,9 @@ export default function Bustype() {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
+                onPress={intercitybus}
                 style={{
                   marginLeft: 350,
-
                   marginRight: 100,
                   position: 'absolute',
                   // backgroundColor: '#ffffff',
@@ -100,135 +110,263 @@ export default function Bustype() {
               marginBottom: 100,
             }}>
             <Text style={{color: '#ffffff', fontSize: 22}}>Buses</Text>
-            <View
-              style={{
-                marginTop: 20,
-                width: '100%',
-                height: 150,
-                backgroundColor: '#D9D9D9',
-                borderTopRightRadius: 20,
-                borderTopLeftRadius: 20,
-                borderBottomLeftRadius: 20,
-                borderBottomRightRadius: 20,
-              }}>
-              <View style={{marginLeft: 140}}>
-                <Image
-                  source={require('../assets/bus3.png')}
-                  style={{width: 200, height: 150}}
-                />
-              </View>
-              <View
-                style={{position: 'absolute', paddingLeft: 15, paddingTop: 20}}>
-                <Text style={{fontWeight: 'bold'}}>Route:</Text>
-                <Text style={{fontWeight: 'bold'}}>Kandana to Kelaniya</Text>
-                <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
-                <TouchableOpacity
+            {/*Normal Bus cards */}
+            {bustype === 'normal' && (
+              <>
+                <View
                   style={{
-                    marginTop: 10,
-                    backgroundColor: '#262626',
+                    marginTop: 20,
+                    width: '100%',
+                    height: 150,
+                    backgroundColor: '#D9D9D9',
+                    borderTopRightRadius: 20,
                     borderTopLeftRadius: 20,
                     borderBottomLeftRadius: 20,
                     borderBottomRightRadius: 20,
-                    borderTopRightRadius: 20,
-                    height: 30,
                   }}>
-                  <Text
+                  <View style={{marginLeft: 140}}>
+                    <Image
+                      source={require('../assets/bus3.png')}
+                      style={{width: 200, height: 150}}
+                    />
+                  </View>
+                  <View
                     style={{
-                      color: '#ffffff',
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      position: 'absolute',
+                      paddingLeft: 15,
+                      paddingTop: 20,
                     }}>
-                    Join
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View
-              style={{
-                marginTop: 20,
-                width: '100%',
-                height: 150,
-                backgroundColor: '#D9D9D9',
-                borderTopRightRadius: 20,
-                borderTopLeftRadius: 20,
-                borderBottomLeftRadius: 20,
-                borderBottomRightRadius: 20,
-              }}>
-              <View style={{marginLeft: 140}}>
-                <Image
-                  source={require('../assets/bus3.png')}
-                  style={{width: 200, height: 150}}
-                />
-              </View>
-              <View
-                style={{position: 'absolute', paddingLeft: 15, paddingTop: 20}}>
-                <Text style={{fontWeight: 'bold'}}>Route:</Text>
-                <Text style={{fontWeight: 'bold'}}>Kandana to Kelaniya</Text>
-                <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
-                <TouchableOpacity
+                    <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                      Kandana to Kelaniya
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                    <TouchableOpacity
+                      style={{
+                        marginTop: 10,
+                        backgroundColor: '#262626',
+                        borderTopLeftRadius: 20,
+                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 20,
+                        borderTopRightRadius: 20,
+                        height: 30,
+                      }}>
+                      <Text
+                        style={{
+                          color: '#ffffff',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Join
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View
                   style={{
-                    marginTop: 10,
-                    backgroundColor: '#262626',
+                    marginTop: 20,
+                    width: '100%',
+                    height: 150,
+                    backgroundColor: '#D9D9D9',
+                    borderTopRightRadius: 20,
                     borderTopLeftRadius: 20,
                     borderBottomLeftRadius: 20,
                     borderBottomRightRadius: 20,
-                    borderTopRightRadius: 20,
-                    height: 30,
                   }}>
-                  <Text
+                  <View style={{marginLeft: 140}}>
+                    <Image
+                      source={require('../assets/bus3.png')}
+                      style={{width: 200, height: 150}}
+                    />
+                  </View>
+                  <View
                     style={{
-                      color: '#ffffff',
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      position: 'absolute',
+                      paddingLeft: 15,
+                      paddingTop: 20,
                     }}>
-                    Join
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View
-              style={{
-                marginTop: 20,
-                width: '100%',
-                height: 150,
-                backgroundColor: '#D9D9D9',
-                borderTopRightRadius: 20,
-                borderTopLeftRadius: 20,
-                borderBottomLeftRadius: 20,
-                borderBottomRightRadius: 20,
-              }}>
-              <View style={{marginLeft: 140}}>
-                <Image
-                  source={require('../assets/bus3.png')}
-                  style={{width: 200, height: 150}}
-                />
-              </View>
-              <View
-                style={{position: 'absolute', paddingLeft: 15, paddingTop: 20}}>
-                <Text style={{fontWeight: 'bold'}}>Route:</Text>
-                <Text style={{fontWeight: 'bold'}}>Kandana to Kelaniya</Text>
-                <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
-                <TouchableOpacity
+                    <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                      Kandana to Kelaniya
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                    <TouchableOpacity
+                      style={{
+                        marginTop: 10,
+                        backgroundColor: '#262626',
+                        borderTopLeftRadius: 20,
+                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 20,
+                        borderTopRightRadius: 20,
+                        height: 30,
+                      }}>
+                      <Text
+                        style={{
+                          color: '#ffffff',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Join
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View
                   style={{
-                    marginTop: 10,
-                    backgroundColor: '#262626',
+                    marginTop: 20,
+                    width: '100%',
+                    height: 150,
+                    backgroundColor: '#D9D9D9',
+                    borderTopRightRadius: 20,
                     borderTopLeftRadius: 20,
                     borderBottomLeftRadius: 20,
                     borderBottomRightRadius: 20,
-                    borderTopRightRadius: 20,
-                    height: 30,
                   }}>
-                  <Text
+                  <View style={{marginLeft: 140}}>
+                    <Image
+                      source={require('../assets/bus3.png')}
+                      style={{width: 200, height: 150}}
+                    />
+                  </View>
+                  <View
                     style={{
-                      color: '#ffffff',
-                      alignSelf: 'center',
-                      marginTop: 5,
+                      position: 'absolute',
+                      paddingLeft: 15,
+                      paddingTop: 20,
                     }}>
-                    Join
-                  </Text>
-                </TouchableOpacity>
-              </View>
-            </View>
+                    <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                      Kandana to Kelaniya
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                    <TouchableOpacity
+                      style={{
+                        marginTop: 10,
+                        backgroundColor: '#262626',
+                        borderTopLeftRadius: 20,
+                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 20,
+                        borderTopRightRadius: 20,
+                        height: 30,
+                      }}>
+                      <Text
+                        style={{
+                          color: '#ffffff',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Join
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                {/* -------------------- */}
+              </>
+            )}
+            {/* Intercity Bus cards */}
+            {bustype === 'intercity' && (
+              <>
+                <View
+                  style={{
+                    marginTop: 20,
+                    width: '100%',
+                    height: 150,
+                    backgroundColor: '#D9D9D9',
+                    borderTopRightRadius: 20,
+                    borderTopLeftRadius: 20,
+                    borderBottomLeftRadius: 20,
+                    borderBottomRightRadius: 20,
+                  }}>
+                  <View style={{marginLeft: 160, marginTop: 10}}>
+                    <Image
+                      source={require('../assets/bus4.png')}
+                      style={{width: 170, height: 120}}
+                    />
+                  </View>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      paddingLeft: 15,
+                      paddingTop: 20,
+                    }}>
+                    <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                      Kandana to Kelaniya
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                    <TouchableOpacity
+                      style={{
+                        marginTop: 10,
+                        backgroundColor: '#262626',
+                        borderTopLeftRadius: 20,
+                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 20,
+                        borderTopRightRadius: 20,
+                        height: 30,
+                      }}>
+                      <Text
+                        style={{
+                          color: '#ffffff',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Join
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    marginTop: 20,
+                    width: '100%',
+                    height: 150,
+                    backgroundColor: '#D9D9D9',
+                    borderTopRightRadius: 20,
+                    borderTopLeftRadius: 20,
+                    borderBottomLeftRadius: 20,
+                    borderBottomRightRadius: 20,
+                  }}>
+                  <View style={{marginLeft: 160, marginTop: 10}}>
+                    <Image
+                      source={require('../assets/bus4.png')}
+                      style={{width: 170, height: 120}}
+                    />
+                  </View>
+                  <View
+                    style={{
+                      position: 'absolute',
+                      paddingLeft: 15,
+                      paddingTop: 20,
+                    }}>
+                    <Text style={{fontWeight: 'bold'}}>Route:</Text>
+                    <Text style={{fontWeight: 'bold'}}>
+                      Kandana to Kelaniya
+                    </Text>
+                    <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
+                    <TouchableOpacity
+                      style={{
+                        marginTop: 10,
+                        backgroundColor: '#262626',
+                        borderTopLeftRadius: 20,
+                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 20,
+                        borderTopRightRadius: 20,
+                        height: 30,
+                      }}>
+                      <Text
+                        style={{
+                          color: '#ffffff',
+                          alignSelf: 'center',
+                          marginTop: 5,
+                        }}>
+                        Join
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+                {/* -------------------- */}
+              </>
+            )}
           </View>
         </View>
       </ScrollView>
