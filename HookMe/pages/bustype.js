@@ -27,11 +27,15 @@ export default function Bustype() {
   };
 
   const normaltrip = () => {
-    navigation.navigate('Trip');
+    navigation.navigate('Trip', {
+      type: 'normal',
+    });
   };
 
   const intercitytrip = () => {
-    navigation.navigate('Trip');
+    navigation.navigate('Trip', {
+      type: 'intercity',
+    });
   };
   return (
     <SafeAreaView>
