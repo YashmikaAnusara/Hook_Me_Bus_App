@@ -26,6 +26,13 @@ export default function Bustype() {
     setbustype('intercity');
   };
 
+  const normaltrip = () => {
+    navigation.navigate('Trip');
+  };
+
+  const intercitytrip = () => {
+    navigation.navigate('Trip');
+  };
   return (
     <SafeAreaView>
       <ScrollView>
@@ -142,6 +149,7 @@ export default function Bustype() {
                     </Text>
                     <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
                     <TouchableOpacity
+                      onPress={normaltrip}
                       style={{
                         marginTop: 10,
                         backgroundColor: '#262626',
@@ -295,6 +303,7 @@ export default function Bustype() {
                     </Text>
                     <Text style={{fontWeight: 'bold'}}>Route No: 254</Text>
                     <TouchableOpacity
+                      onPress={intercitytrip}
                       style={{
                         marginTop: 10,
                         backgroundColor: '#262626',

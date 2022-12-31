@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Signup from './pages/signup';
 import Starttrip from './pages/starttrip';
 import Bustype from './pages/bustype';
+import Trip from './pages/trip';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,11 @@ const App = () => {
           name="Bus_Type"
           options={{headerShown: false}}
           component={Bustype}
+        />
+        <Stack.Screen
+          name="Trip"
+          options={{headerShown: false}}
+          component={Trip}
         />
       </Stack.Navigator>
     </NavigationContainer>
