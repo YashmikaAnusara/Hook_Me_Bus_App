@@ -224,11 +224,21 @@ export default function Trip({route}) {
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
               }}>
-              <Marker
-                coordinate={{latitude: 6.89369, longitude: 79.979003}}
-                image={require('../assets/trackbus.png')}
-                style={{transform: [{rotate: '5deg'}]}}
-              />
+              {type === 'normal' ? (
+                <>
+                  <Marker
+                    coordinate={{latitude: 6.89369, longitude: 79.979003}}
+                    image={require('../assets/trackbus.png')}
+                    style={{transform: [{rotate: '5deg'}]}}
+                  />
+                </>
+              ) : (
+                <Marker
+                  coordinate={{latitude: 6.914656, longitude: 79.972773}}
+                  image={require('../assets/trackbus.png')}
+                  style={{transform: [{rotate: '210deg'}]}}
+                />
+              )}
             </MapView>
           </View>
           <Image
