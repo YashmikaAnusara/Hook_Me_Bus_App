@@ -5,10 +5,10 @@ import Geolocation from '@react-native-community/geolocation';
 export default function Aboutus() {
   useEffect(() => {
     Geolocation.getCurrentPosition(
-      position => {
-        alert(position);
+      pos => {
+        alert(pos);
       },
-      error => alert(error.message),
+      error => alert('Loction Error'),
       {timeout: 20000, maximumAge: 1000},
     );
   });
