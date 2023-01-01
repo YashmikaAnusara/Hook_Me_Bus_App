@@ -194,6 +194,9 @@ export default function Home() {
   const Start_Trip = () => {
     navigation.navigate('Start_Trip');
   };
+  const aboutus = () => {
+    navigation.navigate('About_Us');
+  };
   return (
     <SafeAreaView style={{width: '100%', height: '100%', flex: 1}}>
       <View
@@ -306,6 +309,7 @@ export default function Home() {
           </Text>
           <View style={{paddingTop: 10, paddingRight: 40, paddingLeft: 40}}>
             <TouchableOpacity
+              onPress={aboutus}
               style={{
                 backgroundColor: '#ffffff',
                 height: 30,
