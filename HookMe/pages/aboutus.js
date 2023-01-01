@@ -4,11 +4,11 @@ import Geolocation from '@react-native-community/geolocation';
 
 export default function Aboutus() {
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      pos => {
-        alert(JSON.stringify(pos));
+    Geolocation.getCurrentPosition(
+      position => {
+        alert(position);
       },
-      error => alert(err, message),
+      error => alert(error.message),
       {timeout: 20000, maximumAge: 1000},
     );
   });
