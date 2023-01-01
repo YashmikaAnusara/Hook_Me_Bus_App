@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/core';
-import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {Callout, Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 
 const Darkmap = [
   {
@@ -218,6 +218,7 @@ export default function Trip({route}) {
               style={{width: 500, height: 500}}
               provider={PROVIDER_GOOGLE} // remove if not using Google Maps
               customMapStyle={Darkmap}
+              showsUserLocation
               initialRegion={{
                 latitude: 6.914656,
                 longitude: 79.972773,
@@ -231,13 +232,28 @@ export default function Trip({route}) {
                     image={require('../assets/trackbus.png')}
                     style={{transform: [{rotate: '5deg'}]}}
                   />
+
+                  <Marker
+                    coordinate={{latitude: 6.914757, longitude: 439.972267}}>
+                    <Callout>
+                      <Text>I'm Here</Text>
+                    </Callout>
+                  </Marker>
                 </>
               ) : (
-                <Marker
-                  coordinate={{latitude: 6.914656, longitude: 79.972773}}
-                  image={require('../assets/trackbus.png')}
-                  style={{transform: [{rotate: '210deg'}]}}
-                />
+                <>
+                  <Marker
+                    coordinate={{latitude: 6.914656, longitude: 79.972773}}
+                    image={require('../assets/trackbus.png')}
+                    style={{transform: [{rotate: '210deg'}]}}
+                  />
+                  <Marker
+                    coordinate={{latitude: 6.914757, longitude: 439.972267}}>
+                    <Callout>
+                      <Text>I'm Here</Text>
+                    </Callout>
+                  </Marker>
+                </>
               )}
             </MapView>
           </View>
