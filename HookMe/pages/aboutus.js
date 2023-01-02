@@ -6,7 +6,7 @@ export default function Aboutus() {
   useEffect(() => {
     Geolocation.getCurrentPosition(
       position => {
-        alert(JSON.stringify(position));
+        console.log(JSON.stringify(position));
       },
       error => alert(error.message),
       {timeout: 20000, maximumAge: 1000},
